@@ -310,7 +310,7 @@ void Video::paint(Painter &p, const QRect &clip, TextSelection selection, const 
 			statusX = _width - statusW + statusX;
 			p.fillRect(rtlrect(statusX - st::msgDateImgPadding.x(), statusY - st::msgDateImgPadding.y(), statusW, statusH, _width), selected ? st::msgDateImgBgSelected : st::msgDateImgBg);
 			p.setFont(st::normalFont);
-			p.setPen(st::white);
+			p.setPen(st::black);
 			p.drawTextLeft(statusX, statusY, _width, _statusText, statusW - 2 * st::msgDateImgPadding.x());
 		}
 	}
@@ -320,7 +320,7 @@ void Video::paint(Painter &p, const QRect &clip, TextSelection selection, const 
 		int32 statusH = st::normalFont->height + 2 * st::msgDateImgPadding.y();
 		p.fillRect(rtlrect(statusX - st::msgDateImgPadding.x(), statusY - st::msgDateImgPadding.y(), statusW, statusH, _width), selected ? st::msgDateImgBgSelected : st::msgDateImgBg);
 		p.setFont(st::normalFont);
-		p.setPen(st::white);
+		p.setPen(st::black);
 		p.drawTextLeft(statusX, statusY, _width, _duration, statusW - 2 * st::msgDateImgPadding.x());
 	}
 
@@ -333,7 +333,7 @@ void Video::paint(Painter &p, const QRect &clip, TextSelection selection, const 
 			_a_iconOver.step(context->ms);
 			float64 over = a_iconOver.current();
 			p.setOpacity((st::msgDateImgBg->c.alphaF() * (1 - over)) + (st::msgDateImgBgOver->c.alphaF() * over));
-			p.setBrush(st::black);
+			p.setBrush(st::white);
 		} else {
 			bool over = ClickHandler::showAsActive(loaded ? _openl : (_data->loading() ? _cancell : _savel));
 			p.setBrush(over ? st::msgDateImgBgOver : st::msgDateImgBg);
@@ -718,7 +718,7 @@ void Document::paint(Painter &p, const QRect &clip, TextSelection selection, con
 					}
 					p.drawPixmap(rthumb.topLeft(), _thumb);
 				} else {
-					p.fillRect(rthumb, st::black);
+					p.fillRect(rthumb, st::white);
 				}
 			} else {
 				p.fillRect(rthumb, documentColor(_colorIndex));
@@ -744,7 +744,7 @@ void Document::paint(Painter &p, const QRect &clip, TextSelection selection, con
 						float64 over = a_iconOver.current();
 						if (wthumb) {
 							p.setOpacity((st::msgDateImgBg->c.alphaF() * (1 - over)) + (st::msgDateImgBgOver->c.alphaF() * over));
-							p.setBrush(st::black);
+							p.setBrush(st::white);
 						} else {
 							p.setBrush(style::interpolate(documentDarkColor(_colorIndex), documentOverColor(_colorIndex), over));
 						}
@@ -1073,7 +1073,7 @@ void Link::paint(Painter &p, const QRect &clip, TextSelection selection, const P
 
 			if (!_letter.isEmpty()) {
 				p.setFont(st::linksLetterFont->f);
-				p.setPen(st::white->p);
+				p.setPen(st::black->p);
 				p.drawText(rtlrect(0, top, st::linksPhotoSize, st::linksPhotoSize, _width), _letter, style::al_center);
 			}
 		}

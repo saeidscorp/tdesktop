@@ -115,9 +115,6 @@ Application::Application(int &argc, char **argv) : QApplication(argc, argv) {
 	connect(this, SIGNAL(aboutToQuit()), this, SLOT(closeApplication()));
 
 #ifndef TDESKTOP_DISABLE_AUTOUPDATE
-	connect(&_updateCheckTimer, SIGNAL(timeout()), this, SLOT(updateCheck()));
-	connect(this, SIGNAL(updateFailed()), this, SLOT(onUpdateFailed()));
-	connect(this, SIGNAL(updateReady()), this, SLOT(onUpdateReady()));
 #endif // !TDESKTOP_DISABLE_AUTOUPDATE
 
 	if (cManyInstance()) {
@@ -205,11 +202,6 @@ void Application::socketError(QLocalSocket::LocalSocketError e) {
 #endif // !Q_OS_WINRT
 
 #ifndef TDESKTOP_DISABLE_AUTOUPDATE
-	if (!cNoStartUpdate() && checkReadyUpdate()) {
-		cSetRestartingUpdate(true);
-		DEBUG_LOG(("Application Info: installing update instead of starting app..."));
-		return App::quit();
-	}
 #endif // !TDESKTOP_DISABLE_AUTOUPDATE
 
 	singleInstanceChecked();
@@ -351,14 +343,6 @@ void Application::closeApplication() {
 	_localSocket.close();
 
 #ifndef TDESKTOP_DISABLE_AUTOUPDATE
-	delete _updateReply;
-	_updateReply = 0;
-	if (_updateChecker) _updateChecker->deleteLater();
-	_updateChecker = 0;
-	if (_updateThread) {
-		_updateThread->quit();
-	}
-	_updateThread = 0;
 #endif // !TDESKTOP_DISABLE_AUTOUPDATE
 }
 

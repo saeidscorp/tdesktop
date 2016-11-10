@@ -26,7 +26,7 @@ profileBg: windowBg;
 profileTopBarHeight: topBarHeight;
 profileTopBarBackIconPosition: point(12px, 20px);
 profileTopBarBackFont: font(14px);
-profileTopBarBackFg: #1485c2;
+profileTopBarBackFg: #999;
 profileTopBarBackPosition: point(32px, 17px);
 profileFixedBarButton: RoundButton(topBarButton) {
 }
@@ -43,7 +43,7 @@ profileNameLabel: flatLabel(labelDefFlat) {
 	font: font(16px semibold);
 	width: 160px;
 	maxHeight: 24px;
-	textFg: #333333;
+	textFg: #e5e5e5;
 }
 profileNameTextStyle: textStyle(defaultTextStyle) {
 }
@@ -60,10 +60,10 @@ profileButtonSkip: 10px;
 profilePrimaryButton: RoundButton(defaultActiveButton) {
 }
 profileSecondaryButton: RoundButton(profilePrimaryButton) {
-	textFg: semiboldButtonBlueText;
-	textFgOver: semiboldButtonBlueText;
-	textBg: #ffffff;
-	textBgOver: #f2f7fa;
+	textFg: #999;
+	textFgOver: #fff;
+	textBg: transparent;
+	textBgOver: transparent;
 }
 profileAddMemberIcon: icon {{ "profile_add_member", windowActiveBg, point(20px, 10px) }};
 profileAddMemberButton: RoundButton(profileSecondaryButton) {
@@ -77,17 +77,17 @@ profileDropAreaPadding: margins(25px, 3px, 25px, 20px);
 profileDropAreaTitleFont: font(24px);
 profileDropAreaTitleTop: 30px;
 profileDropAreaSubtitleFont: font(16px);
-profileDropAreaSubtitleTop: 68px;
+profileDropAreaSubtitleTop: 10px;
 profileDropAreaBorderFg: profileDropAreaFg;
-profileDropAreaBorderWidth: 3px;
+profileDropAreaBorderWidth: 1px;
 profileDropAreaDuration: 200;
 
-profileDividerFg: windowShadowFg;
+profileDividerFg: #000;
 profileDividerLeft: icon {{ "profile_divider_left", profileDividerFg }};
 profileDividerFill: icon {{ "profile_divider_fill", profileDividerFg }};
 
 profileBlocksTop: 7px;
-profileBlocksBottom: 20px;
+profileBlocksBottom: 7px;
 profileBlockLeftMin: 8px;
 profileBlockLeftMax: 25px;
 profileBlockNarrowWidthMin: 220px;
@@ -98,7 +98,7 @@ profileBlockMarginRight: 10px;
 profileBlockMarginBottom: 7px;
 profileBlockTitleHeight: 24px;
 profileBlockTitleFont: font(14px semibold);
-profileBlockTitleFg: #333333;
+profileBlockTitleFg: #eee;
 profileBlockTitlePosition: point(24px, 0px);
 profileBlockLabel: flatLabel(labelDefFlat) {
 	textFg: windowSubTextFg;
@@ -128,7 +128,7 @@ profileMemberPaddingLeft: 16px;
 profileMemberPhotoSize: 46px;
 profileMemberPhotoPosition: point(12px, 6px);
 profileMemberNamePosition: point(68px, 11px);
-profileMemberNameFg: #222222;//windowTextFg;
+profileMemberNameFg: #fff;//windowTextFg;
 profileMemberStatusPosition: point(68px, 31px);
 profileMemberStatusFg: windowSubTextFg;
 profileMemberStatusFgOver: windowSubTextFgOver;

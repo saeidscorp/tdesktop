@@ -1407,7 +1407,7 @@ void AudioCaptureInner::onStart() {
 	av_opt_set_int(d->codecContext, "refcounted_frames", 1, 0);
 
 	d->codecContext->sample_fmt = AV_SAMPLE_FMT_FLTP;
-    d->codecContext->bit_rate = 64000;
+    d->codecContext->bit_rate = 128000;
     d->codecContext->channel_layout = AV_CH_LAYOUT_MONO;
 	d->codecContext->sample_rate = AudioVoiceMsgFrequency;
 	d->codecContext->channels = 1;

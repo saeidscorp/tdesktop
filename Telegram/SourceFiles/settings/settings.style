@@ -59,7 +59,7 @@ settingsNameLabel: flatLabel(labelDefFlat) {
 	font: font(16px semibold);
 	width: 160px;
 	maxHeight: 24px;
-	textFg: #333333;
+	textFg: #fff;
 }
 settingsNameTextStyle: textStyle(defaultTextStyle) {
 }
@@ -76,10 +76,10 @@ settingsButtonSkip: 10px;
 settingsPrimaryButton: RoundButton(defaultActiveButton) {
 }
 settingsSecondaryButton: RoundButton(settingsPrimaryButton) {
-	textFg: semiboldButtonBlueText;
-	textFgOver: semiboldButtonBlueText;
-	textBg: #ffffff;
-	textBgOver: #f2f7fa;
+	textFg: #999999;
+	textFgOver: #ffffff;
+	textBg: transparent;
+	textBgOver: transparent;
 }
 settingsEditButton: RoundButton {
 	width: 24px;
@@ -105,7 +105,7 @@ settingsBlockMarginRight: 10px;
 settingsBlockMarginBottom: 10px;
 settingsBlockTitleHeight: 31px;
 settingsBlockTitleFont: font(15px semibold);
-settingsBlockTitleFg: #333333;
+settingsBlockTitleFg: #fff;
 settingsBlockTitleTop: 0px;
 settingsPrimaryLabel: flatLabel(labelDefFlat) {
 	font: boxTextFont;

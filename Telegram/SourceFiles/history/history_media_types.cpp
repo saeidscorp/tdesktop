@@ -418,7 +418,7 @@ void HistoryPhoto::draw(Painter &p, const QRect &r, TextSelection selection, uin
 		} else if (isThumbAnimation(ms)) {
 			float64 over = _animation->a_thumbOver.current();
 			p.setOpacity((st::msgDateImgBg->c.alphaF() * (1 - over)) + (st::msgDateImgBgOver->c.alphaF() * over));
-			p.setBrush(st::black);
+			p.setBrush(st::white);
 		} else {
 			bool over = ClickHandler::showAsActive(_data->loading() ? _cancell : _savel);
 			p.setBrush(over ? st::msgDateImgBgOver : st::msgDateImgBg);
@@ -449,7 +449,7 @@ void HistoryPhoto::draw(Painter &p, const QRect &r, TextSelection selection, uin
 		if (radial) {
 			p.setOpacity(1);
 			QRect rinner(inner.marginsRemoved(QMargins(st::msgFileRadialLine, st::msgFileRadialLine, st::msgFileRadialLine, st::msgFileRadialLine)));
-			_animation->radial.draw(p, rinner, st::msgFileRadialLine, selected ? st::msgInBgSelected : st::msgInBg);
+			_animation->radial.draw(p, rinner, st::msgFileRadialLine, selected ? st::black : st::black);
 		}
 	}
 
@@ -757,7 +757,7 @@ void HistoryVideo::draw(Painter &p, const QRect &r, TextSelection selection, uin
 	} else if (isThumbAnimation(ms)) {
 		float64 over = _animation->a_thumbOver.current();
 		p.setOpacity((st::msgDateImgBg->c.alphaF() * (1 - over)) + (st::msgDateImgBgOver->c.alphaF() * over));
-		p.setBrush(st::black);
+		p.setBrush(st::white);
 	} else {
 		bool over = ClickHandler::showAsActive(_data->loading() ? _cancell : _savel);
 		p.setBrush(over ? st::msgDateImgBgOver : st::msgDateImgBg);
@@ -782,7 +782,7 @@ void HistoryVideo::draw(Painter &p, const QRect &r, TextSelection selection, uin
 	icon->paintInCenter(p, inner);
 	if (radial) {
 		QRect rinner(inner.marginsRemoved(QMargins(st::msgFileRadialLine, st::msgFileRadialLine, st::msgFileRadialLine, st::msgFileRadialLine)));
-		_animation->radial.draw(p, rinner, st::msgFileRadialLine, selected ? st::msgInBgSelected : st::msgInBg);
+		_animation->radial.draw(p, rinner, st::msgFileRadialLine, selected ? st::black : st::black);
 	}
 
 	int32 statusX = skipx + st::msgDateImgDelta + st::msgDateImgPadding.x(), statusY = skipy + st::msgDateImgDelta + st::msgDateImgPadding.y();
@@ -790,7 +790,7 @@ void HistoryVideo::draw(Painter &p, const QRect &r, TextSelection selection, uin
 	int32 statusH = st::normalFont->height + 2 * st::msgDateImgPadding.y();
 	App::roundRect(p, rtlrect(statusX - st::msgDateImgPadding.x(), statusY - st::msgDateImgPadding.y(), statusW, statusH, _width), selected ? st::msgDateImgBgSelected : st::msgDateImgBg, selected ? DateSelectedCorners : DateCorners);
 	p.setFont(st::normalFont);
-	p.setPen(st::white);
+	p.setPen(st::black);
 	p.drawTextLeft(statusX, statusY, _width, _statusText, statusW - 2 * st::msgDateImgPadding.x());
 
 	// date
@@ -1112,7 +1112,7 @@ void HistoryDocument::draw(Painter &p, const QRect &r, TextSelection selection, 
 			} else if (isThumbAnimation(ms)) {
 				float64 over = _animation->a_thumbOver.current();
 				p.setOpacity((st::msgDateImgBg->c.alphaF() * (1 - over)) + (st::msgDateImgBgOver->c.alphaF() * over));
-				p.setBrush(st::black);
+				p.setBrush(st::white);
 			} else {
 				bool over = ClickHandler::showAsActive(_data->loading() ? _cancell : _savel);
 				p.setBrush(over ? st::msgDateImgBgOver : st::msgDateImgBg);
@@ -1136,7 +1136,7 @@ void HistoryDocument::draw(Painter &p, const QRect &r, TextSelection selection, 
 				p.setOpacity(1);
 
 				QRect rinner(inner.marginsRemoved(QMargins(st::msgFileRadialLine, st::msgFileRadialLine, st::msgFileRadialLine, st::msgFileRadialLine)));
-				_animation->radial.draw(p, rinner, st::msgFileRadialLine, selected ? st::msgInBgSelected : st::msgInBg);
+				_animation->radial.draw(p, rinner, st::msgFileRadialLine, selected ? st::black : st::black);
 			}
 		}
 
@@ -1172,7 +1172,7 @@ void HistoryDocument::draw(Painter &p, const QRect &r, TextSelection selection, 
 
 		if (radial) {
 			QRect rinner(inner.marginsRemoved(QMargins(st::msgFileRadialLine, st::msgFileRadialLine, st::msgFileRadialLine, st::msgFileRadialLine)));
-			style::color bg(outbg ? (selected ? st::msgOutBgSelected : st::msgOutBg) : (selected ? st::msgInBgSelected : st::msgInBg));
+			style::color bg(outbg ? (selected ? st::msgOutBgSelected : st::msgOutBg) : (selected ? st::black : st::black));
 			_animation->radial.draw(p, rinner, st::msgFileRadialLine, bg);
 		}
 
@@ -1735,7 +1735,7 @@ void HistoryGif::draw(Painter &p, const QRect &r, TextSelection selection, uint6
 		} else if (isThumbAnimation(ms)) {
 			float64 over = _animation->a_thumbOver.current();
 			p.setOpacity((st::msgDateImgBg->c.alphaF() * (1 - over)) + (st::msgDateImgBgOver->c.alphaF() * over));
-			p.setBrush(st::black);
+			p.setBrush(st::white);
 		} else {
 			bool over = ClickHandler::showAsActive(_data->loading() ? _cancell : _savel);
 			p.setBrush(over ? st::msgDateImgBgOver : st::msgDateImgBg);
@@ -1764,16 +1764,16 @@ void HistoryGif::draw(Painter &p, const QRect &r, TextSelection selection, uint6
 		if (radial) {
 			p.setOpacity(1);
 			QRect rinner(inner.marginsRemoved(QMargins(st::msgFileRadialLine, st::msgFileRadialLine, st::msgFileRadialLine, st::msgFileRadialLine)));
-			_animation->radial.draw(p, rinner, st::msgFileRadialLine, selected ? st::msgInBgSelected : st::msgInBg);
+			_animation->radial.draw(p, rinner, st::msgFileRadialLine, selected ? st::black : st::black);
 		}
 
 		if (!animating || _parent->id < 0) {
 			int32 statusX = skipx + st::msgDateImgDelta + st::msgDateImgPadding.x(), statusY = skipy + st::msgDateImgDelta + st::msgDateImgPadding.y();
 			int32 statusW = st::normalFont->width(_statusText) + 2 * st::msgDateImgPadding.x();
 			int32 statusH = st::normalFont->height + 2 * st::msgDateImgPadding.y();
-			App::roundRect(p, rtlrect(statusX - st::msgDateImgPadding.x(), statusY - st::msgDateImgPadding.y(), statusW, statusH, _width), selected ? st::msgDateImgBgSelected : st::msgDateImgBg, selected ? DateSelectedCorners : DateCorners);
+			App::roundRect(p, rtlrect(statusX - st::msgDateImgPadding.x(), statusY - st::msgDateImgPadding.y(), statusW, statusH, _width), selected ? st::msgDateImgBgSelected : st::white, selected ? DateSelectedCorners : DateCorners);
 			p.setFont(st::normalFont);
-			p.setPen(st::white);
+			p.setPen(st::black);
 			p.drawTextLeft(statusX, statusY, _width, _statusText, statusW - 2 * st::msgDateImgPadding.x());
 		}
 	}

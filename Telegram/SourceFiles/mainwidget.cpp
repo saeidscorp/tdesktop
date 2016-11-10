@@ -171,7 +171,6 @@ MainWidget::MainWidget(MainWindow *window) : TWidget(window)
 	_api->init();
 
 #ifndef TDESKTOP_DISABLE_AUTOUPDATE
-	Sandbox::startUpdateCheck();
 #endif // !TDESKTOP_DISABLE_AUTOUPDATE
 }
 

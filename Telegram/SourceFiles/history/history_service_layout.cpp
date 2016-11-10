@@ -255,7 +255,7 @@ void ServiceMessagePainter::paintComplexBubble(Painter &p, int left, int width, 
 
 	int y = st::msgServiceMargin.top(), previousRichWidth = 0;
 	bool previousShrink = false, forceShrink = false;
-	SideStyle topStyle = SideStyle::Rounded, bottomStyle;
+	SideStyle topStyle = SideStyle::Plain, bottomStyle;
 	for (int i = 0, count = lineWidths.size(); i < count; ++i) {
 		auto lineWidth = lineWidths.at(i);
 		if (i + 1 < count) {
@@ -263,22 +263,22 @@ void ServiceMessagePainter::paintComplexBubble(Painter &p, int left, int width, 
 			if (nextLineWidth > lineWidth) {
 				bottomStyle = SideStyle::Inverted;
 			} else if (nextLineWidth < lineWidth) {
-				bottomStyle = SideStyle::Rounded;
+				bottomStyle = SideStyle::Plain;
 			} else {
 				bottomStyle = SideStyle::Plain;
 			}
 		} else {
-			bottomStyle = SideStyle::Rounded;
+			bottomStyle = SideStyle::Plain;
 		}
 
 		auto richWidth = lineWidth + st::msgServicePadding.left() + st::msgServicePadding.right();
 		auto richHeight = st::msgServiceFont->height;
-		if (topStyle == SideStyle::Rounded) {
+		if (topStyle == SideStyle::Plain) {
 			richHeight += st::msgServicePadding.top();
 		} else if (topStyle == SideStyle::Inverted) {
 			richHeight -= st::msgServicePadding.bottom();
 		}
-		if (bottomStyle == SideStyle::Rounded) {
+		if (bottomStyle == SideStyle::Plain) {
 			richHeight += st::msgServicePadding.bottom();
 		} else if (bottomStyle == SideStyle::Inverted) {
 			richHeight -= st::msgServicePadding.top();
@@ -291,8 +291,8 @@ void ServiceMessagePainter::paintComplexBubble(Painter &p, int left, int width, 
 		previousRichWidth = richWidth;
 
 		if (bottomStyle == SideStyle::Inverted) {
-			topStyle = SideStyle::Rounded;
-		} else if (bottomStyle == SideStyle::Rounded) {
+			topStyle = SideStyle::Plain;
+		} else if (bottomStyle == SideStyle::Plain) {
 			topStyle = SideStyle::Inverted;
 		} else {
 			topStyle = SideStyle::Plain;

@@ -1551,7 +1551,7 @@ void MediaView::paintEvent(QPaintEvent *e) {
 	p.setCompositionMode(QPainter::CompositionMode_Source);
 	if (_fullScreenVideo) {
 		for (int i = 0, l = region.rectCount(); i < l; ++i) {
-			p.fillRect(rs.at(i), st::black);
+			p.fillRect(rs.at(i), st::white);
 		}
 	} else {
 		p.setOpacity(st::mvBgOpacity);
@@ -1611,7 +1611,7 @@ void MediaView::paintEvent(QPaintEvent *e) {
 					auto inner = radialRect();
 
 					p.setPen(Qt::NoPen);
-					p.setBrush(st::black);
+					p.setBrush(st::white);
 					p.setOpacity(radialOpacity * st::radialBgOpacity);
 
 					p.setRenderHint(QPainter::HighQualityAntialiasing);
@@ -1620,7 +1620,7 @@ void MediaView::paintEvent(QPaintEvent *e) {
 
 					p.setOpacity(1);
 					QRect arc(inner.marginsRemoved(QMargins(st::radialLine, st::radialLine, st::radialLine, st::radialLine)));
-					_radial.draw(p, arc, st::radialLine, st::white);
+					_radial.draw(p, arc, st::radialLine, st::black);
 				}
 			} else if (_doc) {
 				paintDocRadialLoading(p, radial, radialOpacity);
@@ -1640,7 +1640,7 @@ void MediaView::paintEvent(QPaintEvent *e) {
 						App::roundRect(p, _saveMsg, st::medviewSaveMsg, MediaviewSaveCorners);
 						st::medviewSaveMsgCheck.paint(p, _saveMsg.topLeft() + st::medviewSaveMsgCheckPos, width());
 
-						p.setPen(st::white->p);
+						p.setPen(st::black->p);
 						textstyleSet(&st::medviewSaveAsTextStyle);
 						_saveMsgText.draw(p, _saveMsg.x() + st::medviewSaveMsgPadding.left(), _saveMsg.y() + st::medviewSaveMsgPadding.top(), _saveMsg.width() - st::medviewSaveMsgPadding.left() - st::medviewSaveMsgPadding.right());
 						textstyleRestore();
@@ -1761,7 +1761,7 @@ void MediaView::paintEvent(QPaintEvent *e) {
 			st::mediaviewMore.paintInCenter(p, _moreNavIcon);
 		}
 
-		p.setPen(st::white);
+		p.setPen(st::black);
 		p.setFont(st::mvThickFont);
 
 		// header
@@ -1812,7 +1812,7 @@ void MediaView::paintEvent(QPaintEvent *e) {
 				p.drawRoundedRect(outer, st::mvCaptionRadius, st::mvCaptionRadius);
 				if (_captionRect.intersects(r)) {
 					textstyleSet(&st::medviewSaveAsTextStyle);
-					p.setPen(st::white->p);
+					p.setPen(st::black->p);
 					_caption.drawElided(p, _captionRect.x(), _captionRect.y(), _captionRect.width(), _captionRect.height() / st::mvCaptionFont->height);
 					textstyleRestore();
 				}
@@ -1843,7 +1843,7 @@ void MediaView::paintDocRadialLoading(Painter &p, bool radial, float64 radialOpa
 		p.setOpacity(1);
 
 		QRect arc(inner.marginsRemoved(QMargins(st::radialLine, st::radialLine, st::radialLine, st::radialLine)));
-		_radial.draw(p, arc, st::radialLine, st::white);
+		_radial.draw(p, arc, st::radialLine, st::black);
 	} else if (_doc && !_doc->loaded()) {
 		p.setOpacity((o * 1. + (1 - o) * st::radialDownloadOpacity));
 		p.drawSpriteCenter(_docIconRect, st::radialDownload);

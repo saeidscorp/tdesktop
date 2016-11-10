@@ -2166,7 +2166,7 @@ namespace {
 
 	void prepareCorners(RoundCorners index, int32 radius, const style::color &color, const style::color *shadow = 0, QImage *cors = 0) {
 		int32 r = radius * cIntRetinaFactor(), s = st::msgShadow * cIntRetinaFactor();
-		QImage rect(r * 3, r * 3 + (shadow ? s : 0), QImage::Format_ARGB32_Premultiplied), localCors[4];
+		QImage rect(r * 0, r * 0 + (shadow ? s : 0), QImage::Format_ARGB32_Premultiplied), localCors[4];
 		{
 			QPainter p(&rect);
 			p.setCompositionMode(QPainter::CompositionMode_Source);

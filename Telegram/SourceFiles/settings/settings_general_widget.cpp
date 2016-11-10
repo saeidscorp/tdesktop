@@ -188,15 +188,6 @@ void GeneralWidget::refreshControls() {
 	style::margins marginSmall(0, 0, 0, st::settingsSmallSkip);
 	style::margins slidedPadding(0, marginSmall.bottom() / 2, 0, marginSmall.bottom() - (marginSmall.bottom() / 2));
 
-#ifndef TDESKTOP_DISABLE_AUTOUPDATE
-	addChildRow(_updateAutomatically, marginSub, lng_settings_update_automatically(lt_version, currentVersion()), SLOT(onUpdateAutomatically()), cAutoUpdate());
-	style::margins marginLink(st::defaultBoxCheckbox.textPosition.x(), 0, 0, st::settingsSkip);
-	addChildRow(_updateRow, marginLink, slidedPadding);
-	connect(_updateRow->entity(), SIGNAL(restart()), this, SLOT(onRestart()));
-	if (!cAutoUpdate()) {
-		_updateRow->hideFast();
-	}
-#endif // !TDESKTOP_DISABLE_AUTOUPDATE
 
 	if (cPlatform() == dbipWindows || cSupportTray()) {
 		addChildRow(_enableTrayIcon, marginSmall, lang(lng_settings_workmode_tray), SLOT(onEnableTrayIcon()), (cWorkMode() == dbiwmTrayOnly || cWorkMode() == dbiwmWindowAndTray));
@@ -282,7 +273,6 @@ void GeneralWidget::onUpdateAutomatically() {
 	Local::writeSettings();
 	if (cAutoUpdate()) {
 		_updateRow->slideDown();
-		Sandbox::startUpdateCheck();
 	} else {
 		_updateRow->slideUp();
 		Sandbox::stopUpdate();

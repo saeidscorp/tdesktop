@@ -117,7 +117,7 @@ void AbstractBox::paintTitle(Painter &p, const QString &title, const QString &ad
 	p.setFont(st::boxTitleFont);
 	if (_blueTitle) {
 		p.fillRect(0, 0, width(), st::boxTitleHeight, st::boxBlueTitleBg->b);
-		p.setPen(st::white);
+		p.setPen(st::black);
 
 		int32 titleWidth = st::boxTitleFont->width(title);
 		p.drawTextLeft(st::boxBlueTitlePosition.x(), st::boxBlueTitlePosition.y(), width(), title, titleWidth);

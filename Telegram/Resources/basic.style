@@ -22,7 +22,7 @@ using "basic_types.style";
 
 semibold: "Open Sans Semibold";
 
-fsize: 13px;
+fsize: 12px;
 normalFont: font(fsize);
 semiboldFont: font(fsize semibold);
 
@@ -30,42 +30,42 @@ emojiImgSize: 18px; // exceptional value for retina
 emojiSize: 18px;
 emojiPadding: 0px;
 
-counterBG: #f23c34;
+counterBG: #111111;
 counterMuteBG: #888;
-counterColor: #fff;
-counterMacInvColor: #ffffff01;
+counterColor: #eee;
+counterMacInvColor: #11111101;
 
 lineWidth: 1px;
 
 transparent: #fff0;
-white: #fff;
-black: #000;
+white: #111111;
+black: #eff0f1;
 
-wndMinWidth: 380px;
+wndMinWidth: 280px;
 
-adaptiveNormalWidth: 640px;
+adaptiveNormalWidth: 540px;
 adaptiveWideWidth: 1366px;
 
-windowBg: #ffffff; // fallback for background: white
-windowActiveBg: #40ace3; // fallback for blue filled active areas
-windowTextFg: #000000; // fallback for text color: black
-windowSubTextFg: #8a8a8a; // fallback for subtext color: gray
-windowSubTextFgOver: #7c99b2; // fallback for subtext over color: gray over blue bg
-windowActiveTextFg: #1485c2; // fallback for active color: blue online
+windowBg: white; // fallback for background: white
+windowActiveBg: white; // fallback for blue filled active areas
+windowTextFg: black; // fallback for text color: black
+windowSubTextFg: #bebebe; // fallback for subtext color: gray
+windowSubTextFgOver: #bebebe; // fallback for subtext over color: gray over blue bg
+windowActiveTextFg: #bebebe; // fallback for active color: blue online
 windowShadowFg: #000000; // fallback for shadow color
 
 semiboldButtonBlueText: #2b99d5;
 
-wndMinHeight: 480px;
+wndMinHeight: 280px;
 wndDefWidth: 800px;
 wndDefHeight: 600px;
 wndShadow: icon {{ "window_shadow", windowShadowFg }};
 wndShadowShift: 1px;
 
-layerAlpha: 0.5;
-layerBg: black;
+layerAlpha: 0.8;
+layerBg: white;
 
-overBg: #edf2f5;
+overBg: #222222;
 
 labelDefFlat: flatLabel {
 	font: font(fsize);
@@ -86,19 +86,19 @@ boxTextFont: font(boxFontSize);
 boxLittleSkip: 10px;
 boxMediumSkip: 20px;
 
-boxTitleFg: #444444;
+boxTitleFg: #eff0f1;
 boxTitleFont: font(boxFontSize bold);
 boxTitlePosition: point(26px, 28px);
 boxTitleHeight: 54px;
 
 boxButtonFont: font(boxFontSize semibold);
 defaultBoxButton: RoundButton {
-	textFg: #2f9fea;
-	textFgOver: #2f9fea;
+	textFg: #999;
+	textFgOver: #ffffff;
 	secondaryTextFg: #2f9fea;
 	secondaryTextFgOver: #2f9fea;
 	textBg: white;
-	textBgOver: #edf7ff;
+	textBgOver: white;
 
 	width: -24px;
 	height: 36px;
@@ -114,14 +114,14 @@ cancelBoxButton: RoundButton(defaultBoxButton) {
 	textFg: #aeaeae;
 }
 attentionBoxButton: RoundButton(defaultBoxButton) {
-	textFg: #ea4b2f;
-	textFgOver: #ea4b2f;
-	textBgOver: #fff0ed;
+	textFg: #eeeeee;
+	textFgOver: #ffffff;
+	textBgOver: #ea4b2f;
 }
 boxButtonPadding: margins(12px, 16px, 22px, 16px);
 defaultBoxLinkButton: linkButton {
-	color: #0080c0;
-	overColor: #0080c0;
+	color: #ccc;
+	overColor: #fff;
 	downColor: #0073ad;
 	font: boxTextFont;
 	overFont: font(boxFontSize underline);
@@ -142,7 +142,7 @@ defaultLeftOutlineButton: OutlineButton {
 	outlineFgOver: windowActiveBg;
 
 	textBg: windowBg;
-	textBgOver: #f2f7fa;
+	textBgOver: #222222;
 
 	textFg: windowActiveTextFg;
 	textFgOver: windowActiveTextFg;
@@ -153,10 +153,10 @@ defaultLeftOutlineButton: OutlineButton {
 attentionLeftOutlineButton: OutlineButton(defaultLeftOutlineButton) {
 	outlineFgOver: #e43f3f;
 
-	textBgOver: #faf2f2;
+	textBgOver: #e43f3f;
 
-	textFg: #d15948;
-	textFgOver: #d15948;
+	textFg: #eee;
+	textFgOver: black;
 }
 
 defaultInputArea: InputArea {
@@ -170,9 +170,9 @@ defaultInputArea: InputArea {
 	placeholderShift: 50px;
 	duration: 120;
 
-	borderFg: #e0e0e0;
-	borderFgActive: #62c0f7;
-	borderFgError: #e48383;
+	borderFg: #474747;
+	borderFgActive: #676767;
+	borderFgError: #cd2727;
 
 	border: 1px;
 	borderActive: 2px;
@@ -180,7 +180,7 @@ defaultInputArea: InputArea {
 
 	font: boxTextFont;
 
-	heightMin: 32px;
+	heightMin: 16px;
 	heightMax: 128px;
 }
 defaultInputField: InputField {
@@ -196,8 +196,8 @@ defaultInputField: InputField {
 	placeholderShift: 50px;
 	duration: 120;
 
-	borderFg: #e0e0e0;
-	borderFgActive: #62c0f7;
+	borderFg: #888;
+	borderFgActive: #999;
 	borderFgError: #e48383;
 
 	border: 1px;
@@ -212,9 +212,9 @@ defaultCheckbox: Checkbox {
 	textFg: black;
 	textBg: white;
 
-	checkFg: #b3b3b3;
-	checkFgOver: #b3b3b3;
-	checkFgActive: #40ace3;
+	checkFg: #3F4448;
+	checkFgOver: #555;
+	checkFgActive: #222222;
 
 	width: -44px;
 	height: 22px;
@@ -236,9 +236,9 @@ defaultRadiobutton: Radiobutton {
 	textFg: black;
 	textBg: white;
 
-	checkFg: #b3b3b3;
-	checkFgOver: #bfbfbf;
-	checkFgActive: #4eb3ee;
+	checkFg: #333;
+	checkFgOver: #444;
+	checkFgActive: #eee;
 
 	width: -46px;
 	height: 22px;
@@ -252,14 +252,14 @@ defaultRadiobutton: Radiobutton {
 	duration: 120;
 }
 solidScroll: flatScroll {
-	barColor: #3f729734;
-	bgColor: #214f751a;
-	barOverColor: #3f729734;
-	bgOverColor: #214f751a;
+	barColor: #44444434;
+	bgColor: #2222221a;
+	barOverColor: #55555534;
+	bgOverColor: #3333331a;
 
 	minHeight: 20px;
 
-	round: 2px;
+	round: 0px;
 	deltax: 5px;
 	width: 14px;
 	deltat: 6px;
@@ -285,7 +285,7 @@ defaultPopupMenu: PopupMenu {
 	itemFgOver: black;
 	itemFgDisabled: #ccc;
 	itemFgShortcut: #999;
-	itemFgShortcutOver: #7c99b2;
+	itemFgShortcutOver: #fff;
 	itemFgShortcutDisabled: #ccc;
 
 	itemPadding: margins(17px, 8px, 17px, 7px);
@@ -293,7 +293,7 @@ defaultPopupMenu: PopupMenu {
 
 	separatorPadding: margins(0px, 5px, 0px, 5px);
 	separatorWidth: 1px;
-	separatorFg: #f1f1f1;
+	separatorFg: #333;
 
 	arrow: icon {{ "dropdown_submenu_arrow", #373737 }};
 
@@ -304,8 +304,8 @@ defaultPopupMenu: PopupMenu {
 }
 
 defaultTooltip: Tooltip {
-	textBg: #eef2f5;
-	textFg: #5d6c80;
+	textBg: white;
+	textFg: black;
 	textFont: normalFont;
 	textBorder: #c9d1db;
 	textPadding: margins(5px, 2px, 5px, 2px);
@@ -317,43 +317,43 @@ defaultTooltip: Tooltip {
 	linesMax: 12;
 }
 
-almostTransparent: #ffffff0d;
+almostTransparent: #1111110d;
 boxScroll: flatScroll(solidScroll) {
-	round: 3px;
+	round: 0px;
 	width: 18px;
 	deltax: 6px;
 }
 boxScrollSkip: 6px;
 boxScrollShadowBg: #00000012;
 
-titleBg: #6389a8;
-titleHeight: 39px;
-titleFont: font(17px);
-titlePos: point(44px, 29px);
-titleMenuOffset: 36px;
+titleBg: #111;
+titleColor:  #eee;
+titleHeight: 25px;
+titleIconPos: point(2px, 2px);
+titleMenuOffset: 26px;
 
 titleRed: #ee4928;
 titleGray: #777;
 titleGreen: #41a903;
 
 titleStatusFg: #999;
-titleStatusActiveFg: #0080c0;
-titleTypingFg: #0080c0;
+titleStatusActiveFg: #e5e5e5;
+titleTypingFg: #eff0f1;
 
 statusFont: font(fsize);
 versionColor: #777;
 
 shadowColor: rgba(0, 0, 0, 24);
-shadowToggleDuration: 200;
+shadowToggleDuration: 80;
 
-slideDuration: 240;
+slideDuration: 80;
 slideShift: 100px;
 slideFadeOut: 0.3;
 slideShadow: icon {{ "slide_shadow", #000000 }};
 slideFunction: transition(easeOutCirc);
 
 btnDefIconed: iconedButton {
-	color: white;
+	color: black;
 	bgColor: white;
 	overBgColor: white;
 	font: font(fsize);
@@ -368,12 +368,12 @@ btnDefIconed: iconedButton {
 	cursor: cursor(pointer);
 }
 
-titleButtonFg: #c4d8e9;
+titleButtonFg: #DADADA;
 titleButtonActiveFg: #ffffff;
 titleButtonDuration: 150;
-sysBtnDelta: 6px;
+sysBtnDelta: 0px;
 sysUpd: sysButton {
-	size: size(31px, 39px);
+	size: size(25px, 25px);
 	icon: icon {{ "title_button_update", titleBg }};
 	color: titleButtonFg;
 	overColor: titleButtonActiveFg;
@@ -399,16 +399,16 @@ sysUnlock: sysButton(sysUpd) {
 	icon: icon {{ "title_button_unlock", titleBg }};
 }
 
-btnWhiteHover: #f5f5f5;
-btnBoxWhiteHover: #fafafa;
-btnYesColor: #0080c0;
-btnYesHover: #0073ad;
+btnWhiteHover: #222222;
+btnBoxWhiteHover: #525252;
+btnYesColor: #a7a7a7;
+btnYesHover: #dedede;
 btnNoColor: #8b8b8b;
 btnNoHover: #777;
 
 titleTextButton: flatButton {
-	color: #d4e3ef;
-	overColor: #fff;
+	color: #999;
+	overColor: #eaeaea;
 	downColor: #fff;
 	bgColor: transparent;
 	overBgColor: transparent;
@@ -417,9 +417,9 @@ titleTextButton: flatButton {
 	width: -14px;
 	height: 39px;
 
-	textTop: 10px;
-	overTextTop: 10px;
-	downTextTop: 11px;
+	textTop: 6px;
+	overTextTop: 6px;
+	downTextTop: 7px;
 
 	font: font(fsize);
 	overFont: font(fsize);
@@ -440,19 +440,19 @@ btnDefBig: flatButton(btnDefFlat) {
 	overFont: font(23px);
 	height: 56px;
 }
-btnNextBG: #2fa9e2;
+btnNextBG: #222222;
 btnDefNext: flatButton(btnDefFlat) {
-	color: white;
-	overColor: white;
-	downColor: white;
+	color: black;
+	overColor: black;
+	downColor: black;
 	bgColor: btnNextBG;
-	overBgColor: #279ad0;
-	downBgColor: #279ad0;
+	overBgColor: #444a4c;
+	downBgColor: #444a4c;
 }
 btnDefBack: flatButton(btnDefFlat) {
-	color: white;
-	overColor: white;
-	downColor: white;
+	color: black;
+	overColor: black;
+	downColor: black;
 	bgColor: #c7c7c7;
 	overBgColor: #b9b9b9;
 	downBgColor: #b9b9b9;
@@ -471,9 +471,9 @@ btnDefLink: linkButton {
 
 inpDefFont: font(17px);
 inpDefFlat: flatInput {
-	textColor: #000;
-	bgColor: #FFF;
-	bgActive: #FFF;
+	textColor: #eff0f1;
+	bgColor: #111111;
+	bgActive: #111111;
 	width: 210px;
 	height: 40px;
 	align: align(left);
@@ -498,17 +498,17 @@ inpDefFlat: flatInput {
 }
 
 inpDefGray: flatInput(inpDefFlat) {
-	bgColor: #f2f2f2;
+	bgColor: #222222;
 	borderWidth: 2px;
-	borderColor: #f2f2f2;
-	borderActive: #54c3f3;
+	borderColor: #222222;
+	borderActive: #222222;
 	borderError: #ed8080;
 	phColor: #808080;
 }
 
 taDefFlat: flatTextarea {
-	textColor: #000;
-	bgColor: #FFF;
+	textColor: #eff0f1;
+	bgColor: #111111;
 	align: align(left);
 	textMrg: margins(5px, 5px, 5px, 5px);
 	font: inpDefFont;
@@ -531,7 +531,7 @@ scrollDef: flatScroll {
 	barOverColor: rgba(0, 0, 0, 122);
 	bgOverColor: rgba(0, 0, 0, 44);
 
-	round: 2px;
+	round: 0px;
 
 	width: 10px;
 	minHeight: 20px;
@@ -548,14 +548,14 @@ scrollDef: flatScroll {
 }
 
 dateRadius: 10px;
-buttonRadius: 3px;
+buttonRadius: 0px;
 
 scrollCountries: flatScroll(scrollDef) {
 	topsh: 0px;
 	bottomsh: -2px;
 }
 
-lnkText: #0f7dc7;
+lnkText: #f00;
 
 introBtnTop: 288px;
 introSkip: 45px;
@@ -585,7 +585,7 @@ introPointTop: 3px;
 introPointDelta: 10px;
 introPointColor: rgb(0, 0, 0);
 introPointAlpha: 0.5;
-introPointHoverColor: #86b4e3;
+introPointHoverColor: #f00;
 introPointStepT: transition(sineInOut);
 introPointAlphaT: transition(linear);
 introPointShowStepT: transition(easeOutCirc);
@@ -596,7 +596,7 @@ introPointHideAlphaT: transition(easeOutCirc);
 introStepSize: size(400px, 200px);
 introSize: size(400px, 400px);
 introSlideShift: 500px; // intro hiding animation
-introSlideDuration: 200;
+introSlideDuration: 100;
 introSlideDelta: 0; // between hide start and show start
 introHideFunc: transition(easeInCirc);
 introShowFunc: transition(easeOutCirc);
@@ -627,7 +627,7 @@ introCountry: countryInput {
 	width: 300px;
 	height: 41px;
 	top: 33px;
-	bgColor: #f2f2f2;
+	bgColor: #222222;
 	ptrSize: size(15px, 8px);
 	textMrg: margins(16px, 5px, 16px, 15px);
 	font: inpDefFont;
@@ -676,7 +676,7 @@ countryRowPadding: margins(22px, 9px, 8px, 0px);
 countryRowCodeFont: font(fsize);
 countryRowBgOver: overBg;
 countryRowCodeFg: #808080;
-countryRowCodeFgOver: #7c99b2;
+countryRowCodeFgOver: #fff;
 countriesSkip: 12px;
 countriesScroll: flatScroll(boxScroll) {
 	deltat: 9px;
@@ -730,8 +730,8 @@ noContactsColor: #777;
 fieldSearchIcon: icon {{ "box_search", #aaaaaa, point(10px, 9px) }};
 dlgFilter: flatInput(inpDefGray) {
 	font: font(fsize);
-	bgColor: #f2f2f2;
-	phColor: #949494;
+	bgColor: #222222;
+	phColor: #a4a4a4;
 	phFocusColor: #a4a4a4;
 	icon: fieldSearchIcon;
 
@@ -742,36 +742,36 @@ dlgFilter: flatInput(inpDefGray) {
 
 topBarHeight: 54px;
 topBarBG: white;
-topBarDuration: 200;
-topBarForward: icon {{ "title_next", #a3a3a3 }};
-topBarBackward: icon {{ "title_previous", #a3a3a3 }};
-topBarForwardAlpha: 0.6;
-topBarBack: icon {{ "title_previous", #259fd8 }};
-topBarBackAlpha: 0.8;
-topBarBackColor: #005faf;
+topBarDuration: 100;
+topBarForward: icon {{ "title_next", #fff }};
+topBarBackward: icon {{ "title_previous", #fff }};
+topBarForwardAlpha: 0.5;
+topBarBack: icon {{ "title_previous", #fff }};
+topBarBackAlpha: 0.5;
+topBarBackColor: #fff;
 topBarBackFont: font(16px);
 topBarArrowPadding: margins(39px, 8px, 17px, 8px);
 topBarSearch: IconButton {
 	width: 44px;
 	height: topBarHeight;
 
-	icon: icon {{ "title_search", #000000 }};
+	icon: icon {{ "title_search", #fff }};
 	iconPosition: point(13px, 18px);
 	downIconPosition: point(13px, 18px);
 
-	opacity: 0.22;
-	overOpacity: 0.36;
+	opacity: 0.5;
+	overOpacity: 0.8;
 
 	duration: 150;
 }
 topBarMinPadding: 5px;
 topBarButton: RoundButton {
-	textFg: #0084c4;
-	textFgOver: #0084c4;
+	textFg: btnYesColor;
+	textFgOver: btnYesHover;
 	secondaryTextFg: #0084c4;
 	secondaryTextFgOver: #0084c4;
-	textBg: windowBg;
-	textBgOver: #edf4f7;
+	textBg: transparent;
+	textBgOver: transparent;
 
 	width: -22px;
 	height: 28px;
@@ -784,12 +784,12 @@ topBarButton: RoundButton {
 	duration: 200;
 }
 defaultActiveButton: RoundButton {
-	textFg: #ffffff;
+	textFg: #999999;
 	textFgOver: #ffffff;
-	secondaryTextFg: #cceeff;
-	secondaryTextFgOver: #cceeff;
-	textBg: windowActiveBg;
-	textBgOver: #46b4eb;
+	secondaryTextFg: #999999;
+	secondaryTextFgOver: #ffffff;
+	textBg: transparent;
+	textBgOver: transparent;
 
 	secondarySkip: 7px;
 
@@ -804,10 +804,10 @@ defaultActiveButton: RoundButton {
 	duration: 200;
 }
 topBarClearButton: RoundButton(defaultActiveButton) {
-	textFg: semiboldButtonBlueText;
-	textFgOver: semiboldButtonBlueText;
-	textBg: #ffffff;
-	textBgOver: #f2f7fa;
+	textFg: #999999;
+	textFgOver: #ffffff;
+	textBg: transparent;
+	textBgOver: transparent;
 
 	width: -18px;
 }
@@ -822,28 +822,28 @@ msgNameFont: semiboldFont;
 msgServiceFont: semiboldFont;
 msgServiceNameFont: semiboldFont;
 msgServicePhotoWidth: 100px;
-msgDateFont: font(13px);
+msgDateFont: font(10px);
 msgMinWidth: 190px;
 msgPhotoSize: 33px;
 msgPhotoSkip: 40px;
 msgPadding: margins(13px, 7px, 13px, 8px);
-msgMargin: margins(13px, 10px, 53px, 2px);
-msgMarginTopAttached: 3px;
+msgMargin: margins(13px, 10px, 53px, 0px);
+msgMarginTopAttached: 0px;
 msgLnkPadding: 2px; // for media open / save links
-msgBorder: #f0f0f0;
-msgInBg: #fff;
-msgInBgSelected: #c2dcf2; // #358cd4 with 30% opacity
-msgOutBg: #effdde;
-msgOutBgSelected: #b7dbdb;
+msgBorder: #222222;
+msgInBg: #111111;
+msgInBgSelected: #2980b9; // #358cd4 with 30% opacity
+msgOutBg: #111111;
+msgOutBgSelected: #2980b9;
 msgSelectOverlay: #358cd44c;
 msgStickerOverlay: #358cd47f;
-msgInServiceFg: #0e7acd;
-msgInServiceFgSelected: #0e7acd;
+msgInServiceFg: #e6e6e6;
+msgInServiceFgSelected: #e6e6e6;
 msgOutServiceFg: #3a8e26;
 msgOutServiceFgSelected: #367570;
-msgShadow: 2px;
-msgInShadow: #748ea229;
-msgInShadowSelected: #548dbb29;
+msgShadow: 0px;
+msgInShadow: #3ac34740;
+msgInShadowSelected: #37a78e40;
 msgOutShadow: #3ac34740;
 msgOutShadowSelected: #37a78e40;
 msgInDateFg: #a0acb6;
@@ -855,8 +855,8 @@ msgReplyPadding: margins(6px, 6px, 11px, 6px);
 msgReplyBarPos: point(1px, 0px);
 msgReplyBarSize: size(2px, 36px);
 msgReplyBarSkip: 10px;
-msgInReplyBarColor: #2fa9e2;
-msgInReplyBarSelColor: #2fa9e2;
+msgInReplyBarColor: #e6e6e6;
+msgInReplyBarSelColor: #e6e6e6;
 
 msgBotKbDuration: 200;
 msgBotKbFont: semiboldFont;
@@ -874,12 +874,12 @@ msgBotKbButton: botKeyboardButton {
 
 msgServiceBg: #89a0b47f;
 msgServiceSelectBg: #bbc8d4a2;
-msgServiceColor: #FFF;
+msgServiceColor: #eff0f1;
 msgServicePadding: margins(12px, 3px, 12px, 4px);
 msgServiceMargin: margins(10px, 10px, 80px, 2px);
 
-msgColor: #000;
-msgDateColor: #000;
+msgColor: #eff0f1;
+msgDateColor: #eff0f1;
 msgLinkColor: #2a6dc2;
 msgPressedLinkColor: #004bad;
 msgSkip: 40px;
@@ -891,9 +891,9 @@ msgDateSpace: 12px;
 msgDateDelta: point(2px, 5px);
 
 msgDateImgDelta: 4px;
-msgDateImgColor: #fff;
-msgDateImgBg: #00000054;
-msgDateImgBgOver: #00000074;
+msgDateImgColor: #eff0f1;
+msgDateImgBg: #0008;
+msgDateImgBgOver: #0008;
 msgDateImgBgSelected: #1c4a7187;
 msgDateImgPadding: point(8px, 2px);
 msgDateImgCheckSpace: 4px;
@@ -905,16 +905,16 @@ collapseButton: flatButton(btnDefFlat) {
 	bgColor: transparent;
 	downBgColor: transparent;
 	overBgColor: transparent;
-	color: white;
-	overColor: white;
-	downColor: white;
+	color: black;
+	overColor: black;
+	downColor: black;
 	textTop: 3px;
 	overTextTop: 3px;
 	downTextTop: 3px;
 	height: 25px;
 }
-collapseHideDuration: 200;
-collapseShowDuration: 200;
+collapseHideDuration: 100;
+collapseShowDuration: 100;
 
 defaultTextStyle: textStyle {
 	linkFlags: font(fsize);
@@ -939,7 +939,7 @@ serviceTextStyle: textStyle(defaultTextStyle) {
 	selectOverlay: msgServiceSelectBg;
 }
 inTextStyle: textStyle(defaultTextStyle) {
-	monoFg: #4e7391;
+	monoFg: #5DC452;
 	selectBg: msgInBgSelected;
 	selectOverlay: msgSelectOverlay;
 }
@@ -1030,21 +1030,21 @@ msgFileThumbPadding: margins(10px, 10px, 14px, 10px);
 msgFileThumbNameTop: 12px;
 msgFileThumbStatusTop: 32px;
 msgFileThumbLinkTop: 60px;
-msgFileThumbLinkInFg: semiboldButtonBlueText;
-msgFileThumbLinkInFgSelected: semiboldButtonBlueText;
+msgFileThumbLinkInFg: #e5e5e5;
+msgFileThumbLinkInFgSelected: #e5e5e5;
 msgFileThumbLinkOutFg: #5eba5b;
 msgFileThumbLinkOutFgSelected: #31a298;
 msgFileNameTop: 16px;
 msgFileStatusTop: 37px;
 msgFileMinWidth: 294px;
-msgFileInBg: windowActiveBg;
-msgFileInBgOver: #4eade3;
+msgFileInBg: #222;
+msgFileInBgOver: #333;
 msgFileInBgSelected: #51a3d3;
 msgFileOutBg: #78c67f;
 msgFileOutBgOver: #6bc272;
 msgFileOutBgSelected: #5fb389;
 
-msgFileOverDuration: 200;
+msgFileOverDuration: 100;
 msgFileRadialLine: 3px;
 
 msgVideoSize: size(320px, 240px);
@@ -1053,14 +1053,14 @@ msgWaveformBar: 2px;
 msgWaveformSkip: 1px;
 msgWaveformMin: 2px;
 msgWaveformMax: 20px;
-msgWaveformInActive: windowActiveBg;
-msgWaveformInActiveSelected: #51a3d3;
-msgWaveformInInactive: #d4dee6;
-msgWaveformInInactiveSelected: #9cc1e1;
-msgWaveformOutActive: #78c67f;
-msgWaveformOutActiveSelected: #6badad;
-msgWaveformOutInactive: #b3e2b4;
-msgWaveformOutInactiveSelected: #91c3c3;
+msgWaveformInActive: #eee;
+msgWaveformInActiveSelected: #fff;
+msgWaveformInInactive: #888;
+msgWaveformInInactiveSelected: #aaa;
+msgWaveformOutActive: #eee;
+msgWaveformOutActiveSelected: #fff;
+msgWaveformOutInactive: #888;
+msgWaveformOutInactiveSelected: #aaa;
 
 sendPadding: 9px;
 btnSend: flatButton(btnDefFlat) {
@@ -1137,7 +1137,7 @@ btnBotKbHide: iconedButton(btnAttachEmoji) {
 	downIconPos: point(5px, 17px);
 }
 silentToggle: flatCheckbox {
-	textColor: black;
+	textColor: #eff0f1;
 	bgColor: white;
 	disColor: black;
 
@@ -1199,7 +1199,7 @@ historyScroll: flatScroll(scrollDef) {
 	barOverColor: #89a0b4bc;
 	bgOverColor: #89a0b46b;
 
-	round: 3px;
+	round: 0px;
 
 	width: 12px;
 	deltax: 3px;
@@ -1248,25 +1248,25 @@ reportSpamButton: flatButton(reportSpamHide) {
 	downBgColor: #7b7b7b;
 }
 reportSpamSeparator: 30px;
-reportSpamBg: #fffffff0;
+reportSpamBg: #111111f0;
 
 newMsgSound: ":/gui/art/newmsg.wav";
 
 unreadBarHeight: 32px;
 unreadBarMargin: 8px;
 unreadBarFont: semiboldFont;
-unreadBarBG: #fcfbfa;
+unreadBarBG: #222222;
 unreadBarBorder: shadowColor;
-unreadBarColor: #538bb4;
+unreadBarColor: #999;
 
 searchedBarHeight: unreadBarHeight;
 searchedBarFont: unreadBarFont;
-searchedBarBG: #ebeef1;
+searchedBarBG: #222222;
 searchedBarBorder: unreadBarBorder;
 searchedBarColor: #a2aeb7;
 
-layerSlideDuration: 200;
-layerHideDuration: 200;
+layerSlideDuration: 100;
+layerHideDuration: 100;
 layerPadding: margins(10px, 10px, 10px, 10px);
 
 contactPadding: margins(49px, 22px, 0px, 6px);
@@ -1280,15 +1280,15 @@ contactsNameFont: semiboldFont;
 contactsStatusTop: 23px;
 contactsStatusFont: font(fsize);
 contactsStatusFg: #999999;
-contactsStatusFgOver: #7c99b2;
-contactsStatusFgOnline: #3b8dcc;
+contactsStatusFgOver: #fff;
+contactsStatusFgOnline: #dfdfdf;
 contactsBgOver: overBg;
 contactsCheckPosition: point(8px, 16px);
-contactsAboutBg: #f7f7f7;
+contactsAboutBg: #222222;
 contactsAboutShadow: #0000001F;
 contactsAdminCheckbox: Checkbox(defaultBoxCheckbox) {
 	font: semiboldFont;
-	textBg: #f7f7f7;
+	textBg: #222222;
 	textPosition: point(34px, 1px);
 }
 contactsAboutHeight: 42px;
@@ -1333,7 +1333,7 @@ confirmCaptionArea: InputArea(defaultInputArea) {
 	textMargins: margins(1px, 6px, 1px, 4px);
 	heightMax: 56px;
 }
-confirmBg: #f2f2f2;
+confirmBg: #222222;
 confirmMaxHeight: 245px;
 confirmCompressedSkip: 10px;
 
@@ -1420,7 +1420,7 @@ connectingPadding: margins(5px, 5px, 5px, 5px);
 
 dropdownDef: dropdown {
 	border: 1px;
-	borderColor: #ebebeb;
+	borderColor: #272727;
 
 	padding: margins(10px, 10px, 10px, 10px);
 	shadow: defaultDropdownShadow;
@@ -1501,7 +1501,7 @@ stickersMaxHeight: 440px;
 stickersPadding: margins(19px, 17px, 19px, 17px);
 stickersSize: size(64px, 64px);
 stickersScroll: flatScroll(boxScroll) {
-	round: 2px;
+	round: 0px;
 	deltax: 7px;
 	deltat: 23px;
 	deltab: 9px;
@@ -1509,7 +1509,7 @@ stickersScroll: flatScroll(boxScroll) {
 stickersReorderPadding: margins(0px, 12px, 0px, 12px);
 stickersReorderFg: #777;
 stickersRowDisabledOpacity: 0.4;
-stickersRowDuration: 200;
+stickersRowDuration: 100;
 
 emojiScroll: flatScroll(solidScroll) {
 	deltat: 48px;
@@ -1539,7 +1539,7 @@ featuredStickersActive: sprite(350px, 264px, 21px, 22px);
 stickersSettingsUnreadSize: 17px;
 stickersSettingsUnreadPosition: point(4px, 5px);
 
-emojiPanCategories: #f7f7f7;
+emojiPanCategories: #111111;
 
 rbEmoji: flatCheckbox {
 	textColor: transparent;
@@ -1628,14 +1628,14 @@ emojiPanSize: size(45px, 41px);
 emojiPanWidth: 345px;
 emojiPanMaxHeight: 366px;
 emojiPanDuration: 200;
-emojiPanHover: #f0f4f7;
+emojiPanHover: #222222;
 
 emojiPanHeader: 42px;
 emojiPanHeaderFont: semiboldFont;
 emojiPanHeaderColor: #999;
 emojiPanHeaderLeft: 22px;
 emojiPanHeaderTop: 12px;
-emojiPanHeaderBg: #fffffff2;
+emojiPanHeaderBg: #111111f2;
 
 emojiColorsPadding: 5px;
 emojiColorsSep: 1px;
@@ -1645,7 +1645,7 @@ emojiSwitchSkip: 27px;
 emojiSwitchImgSkip: 21px;
 emojiSwitchStickers: sprite(318px, 328px, 8px, 12px);
 emojiSwitchEmoji: sprite(310px, 328px, 8px, 12px);
-emojiSwitchColor: #42a8db;
+emojiSwitchColor: #e0e0e0;
 
 stickerPanSize: size(64px, 64px);
 stickerPanPadding: 11px;
@@ -1654,19 +1654,19 @@ stickerPanDeleteOpacity: 0.5;
 stickerIconPadding: 5px;
 stickerIconOpacity: 0.7;
 stickerIconSel: 2px;
-stickerIconSelColor: #58b2ed;
+stickerIconSelColor: #ffffff;
 stickerIconLeft: sprite(342px, 72px, 40px, 1px);
 stickerIconRight: sprite(342px, 73px, 40px, 1px);
 stickerIconMove: 400;
 stickerPreviewDuration: 150;
-stickerPreviewBg: #FFFFFFB0;
+stickerPreviewBg: #111111B0;
 stickerPreviewMin: 0.1;
 
 botKbDuration: 200;
-botKbBg: #edf1f5;
-botKbOverBg: #d8e2ec;
-botKbDownBg: #d8e2ec;
-botKbColor: #4b565f;
+botKbBg: #222222;
+botKbOverBg: #333333;
+botKbDownBg: #444444;
+botKbColor: #aaa;
 botKbFont: font(15px semibold);
 botKbButton: botKeyboardButton {
 	margin: 10px;
@@ -1699,7 +1699,7 @@ maxStickerSize: 256px;
 maxGifSize: 320px;
 maxSignatureSize: 144px;
 
-mvBgColor: #222;
+mvBgColor: #111;
 mvBgOpacity: 0.92;
 mvThickFont: semiboldFont;
 mvFont: font(fsize);
@@ -1708,14 +1708,14 @@ mvTextLeft: 16px;
 mvTextSkip: 10px;
 mvHeaderTop: 48px;
 mvTextTop: 24px;
-mvTextColor: white;
-mvTextOpacity: 0.5;
+mvTextColor: #fff;
+mvTextOpacity: 0.9;
 mvTextOverOpacity: 1;
 
 mvIconOpacity: 0.45;
 mvIconOverOpacity: 1;
-mvControlBgColor: black;
-mvControlBgOpacity: 0.3;
+mvControlBgColor: white;
+mvControlBgOpacity: 0.1;
 mvControlMargin: 0px;
 mvControlSize: 90px;
 mvIconSize: size(60px, 56px);
@@ -1738,7 +1738,7 @@ mvButton: iconedButton(btnDefIconed) {
 	width: -32px;
 	height: 36px;
 
-	color: white;
+	color: black;
 
 	textPos: point(16px, 9px);
 	downTextPos: point(16px, 10px);
@@ -1750,11 +1750,11 @@ mvPopupMenu: PopupMenu(defaultPopupMenu) {
 
 	itemBg: #383838;
 	itemBgOver: #505050;
-	itemFg: white;
-	itemFgOver: white;
+	itemFg: black;
+	itemFgOver: black;
 	itemFgDisabled: #999;
 	itemFgShortcut: #eee;
-	itemFgShortcutOver: #fff;
+	itemFgShortcutOver: #eff0f1;
 	itemFgShortcutDisabled: #999;
 
 	separatorFg: #484848;
@@ -1778,13 +1778,13 @@ mvDocSizeTop: 29px;
 mvDocSizeColor: #808080;
 mvDocExtTop: 35px;
 mvDocExtFont: font(semibold 18px);
-mvDocExtColor: white;
+mvDocExtColor: black;
 mvDocExtPadding: 10px;
 mvDocLinksTop: 57px;
 mvDocIconSize: 80px;
 
 mvDocLink: linkButton(btnDefLink) {
-	color: #4595d3;
+	color: #fff;
 	overColor: #4595d3;
 	downColor: #4595d3;
 }
@@ -1794,8 +1794,8 @@ mvSwipeDistance: 80px;
 
 mvCaptionPadding: margins(18px, 10px, 18px, 10px);
 mvCaptionMargin: size(11px, 11px);
-mvCaptionRadius: 2px;
-mvCaptionBg: #11111180;
+mvCaptionRadius: 0px;
+mvCaptionBg: #000;
 mvCaptionFont: font(fsize);
 
 medviewSaveMsgCheck: icon {{ "mediaview_save_check", #ffffff }};
@@ -1805,7 +1805,7 @@ medviewSaveMsgCheckPos: point(23px, 21px);
 medviewSaveMsgShowing: 200;
 medviewSaveMsgShown: 2000;
 medviewSaveMsgHiding: 2500;
-medviewSaveMsg: #000000b2;
+medviewSaveMsg: white;
 
 // Mac specific
 
@@ -1852,7 +1852,7 @@ usernameSkip: 49px;
 usernameTextStyle: textStyle(defaultTextStyle) {
 	lineHeight: 20px;
 }
-usernameDefaultFg: #777;
+usernameDefaultFg: #eee;
 
 youtubeIcon: sprite(116px, 338px, 72px, 50px);
 videoIcon: sprite(0px, 340px, 60px, 60px);
@@ -1868,7 +1868,7 @@ langsButton: Radiobutton(defaultRadiobutton) {
 backgroundPadding: 10px;
 backgroundSize: size(108px, 193px);
 backgroundScroll: flatScroll(boxScroll) {
-	round: 2px;
+	round: 0px;
 	width: 10px;
 	deltax: 3px;
 	deltat: 10px;
@@ -1900,14 +1900,14 @@ mentionPadding: margins(8px, 5px, 8px, 5px);
 mentionTop: 11px;
 mentionFont: linkFont;
 mentionPhotoSize: msgPhotoSize;
-mentionBgOver: #f5f5f5;
+mentionBgOver: #222222;
 mentionFg: #777;
 mentionFgOver: #707070;
-mentionFgActive: #0080c0;
+mentionFgActive: #a7a7a7;
 mentionFgOverActive: #0077b3;
 
 sessionsScroll: flatScroll(boxScroll) {
-	round: 2px;
+	round: 0px;
 	deltax: 5px;
 	width: 14px;
 }
@@ -1978,5 +1978,5 @@ infoButton: PeerAvatarButton {
 }
 
 // forward declaration for single "title_previous" usage.
-profileTopBarBackIconFg: #0290d7;
+profileTopBarBackIconFg: #999999;
 profileTopBarBackIcon: icon {{ "title_previous", profileTopBarBackIconFg }};

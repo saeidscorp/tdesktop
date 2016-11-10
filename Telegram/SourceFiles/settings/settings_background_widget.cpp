@@ -75,7 +75,7 @@ void BackgroundRow::paintEvent(QPaintEvent *e) {
 
 		p.setOpacity(1);
 		QRect arc(inner.marginsRemoved(QMargins(st::radialLine, st::radialLine, st::radialLine, st::radialLine)));
-		_radial.draw(p, arc, st::radialLine, st::white);
+		_radial.draw(p, arc, st::radialLine, st::black);
 	} else {
 		p.drawPixmap(0, 0, _background);
 	}

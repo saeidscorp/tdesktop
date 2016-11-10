@@ -61,7 +61,6 @@ IntroWidget::IntroWidget(QWidget *parent) : TWidget(parent)
 	_back->moveToLeft(st::introBackPosition.x(), st::introBackPosition.y());
 
 #ifndef TDESKTOP_DISABLE_AUTOUPDATE
-	Sandbox::startUpdateCheck();
 #endif // !TDESKTOP_DISABLE_AUTOUPDATE
 }
 
@@ -254,7 +253,7 @@ void IntroWidget::paintEvent(QPaintEvent *e) {
 		if (a_coordOver.current() > 0) {
 			p.drawPixmap(QRect(0, 0, a_coordOver.current(), height()), _cacheUnder, QRect(-a_coordUnder.current() * cRetinaFactor(), 0, a_coordOver.current() * cRetinaFactor(), height() * cRetinaFactor()));
 			p.setOpacity(a_shadow.current() * st::slideFadeOut);
-			p.fillRect(0, 0, a_coordOver.current(), height(), st::black->b);
+			p.fillRect(0, 0, a_coordOver.current(), height(), st::white->b);
 			p.setOpacity(1);
 		}
 		p.drawPixmap(a_coordOver.current(), 0, _cacheOver);

@@ -34,17 +34,17 @@ MediaPlayerButton {
 	cancelStroke: pixels;
 }
 
-mediaPlayerActiveFg: #54b5ed;
-mediaPlayerInactiveFg: #dfebf2;
+mediaPlayerActiveFg: #eee;
+mediaPlayerInactiveFg: #888;
 
 mediaPlayerButton: MediaPlayerButton {
 	playPosition: point(2px, 0px);
-	playOuter: size(17px, 15px);
+	playOuter: size(17px, 17px);
 	pausePosition: point(1px, 1px);
-	pauseOuter: size(15px, 15px);
+	pauseOuter: size(17px, 17px);
 	pauseStroke: 5px;
 	cancelPosition: point(1px, 1px);
-	cancelOuter: size(15px, 15px);
+	cancelOuter: size(17px, 17px);
 	cancelStroke: 3px;
 }
 mediaPlayerButtonSize: size(25px, 30px);
@@ -156,7 +156,7 @@ mediaPlayerPlayback: FilledSlider {
 
 mediaPlayerTitleButtonSize: size(titleHeight, titleHeight);
 mediaPlayerTitleButtonInner: size(25px, 25px);
-mediaPlayerTitleButtonInnerBg: #49708f;
+mediaPlayerTitleButtonInnerBg: #111111;
 mediaPlayerButtonTransformDuration: 200;
 
 mediaPlayerTitleButton: MediaPlayerButton {
@@ -242,15 +242,15 @@ mediaPlayerListMarginBottom: 10px;
 mediaPlayerScrollShadow: icon {{ "playlist_shadow", #000000 }};
 
 mediaPlayerListMarginTop: 8px;
-mediaPlayerListIconFg: #ffffff;
+mediaPlayerListIconFg: #eff0f1;
 mediaPlayerFileLayout: OverviewFileLayout(overviewFileLayout) {
 	maxWidth: 344px;
 	songPadding: margins(17px, 7px, 10px, 6px);
 	songThumbSize: 36px;
 	songNameTop: 7px;
 	songStatusTop: 25px;
-	songIconBg: mediaPlayerActiveFg;
-	songOverBg: mediaPlayerActiveFg;
+	songIconBg: #222;
+	songOverBg: #333;
 	songPause: icon {{ "playlist_pause", mediaPlayerListIconFg }};
 	songPlay: icon {{ "playlist_play", mediaPlayerListIconFg }};
 	songCancel: icon {{ "playlist_cancel", mediaPlayerListIconFg }};

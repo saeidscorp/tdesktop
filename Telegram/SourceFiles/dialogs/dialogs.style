@@ -21,31 +21,31 @@ Copyright (c) 2014-2016 John Preston, https://desktop.telegram.org
 using "basic.style";
 using "basic_types.style";
 
-dialogsUnreadFg: #ffffff;
-dialogsUnreadFgActive: #5b94bf;
-dialogsUnreadBg: windowActiveBg;
-dialogsUnreadBgMuted: #bbbbbb;
-dialogsUnreadBgActive: #ffffff;
-dialogsUnreadBgMutedActive: #d3e2ee;
+dialogsUnreadFg: #232629;
+dialogsUnreadFgActive: #232629;
+dialogsUnreadBg: #BBB;//#6fc766;
+dialogsUnreadBgMuted: #999;
+dialogsUnreadBgActive: #BBB;
+dialogsUnreadBgMutedActive: #BBB;
 dialogsUnreadFont: font(12px bold);
 dialogsUnreadHeight: 19px;
 dialogsUnreadPadding: 5px;
 
 dialogsBg: windowBg;
-dialogsBgOver: #f5f5f5;
-dialogsBgActive: #6a91b1;
+dialogsBgOver: #222222;
+dialogsBgActive: #222222;
 dialogsTextFont: font(fsize);
 dialogsTextFg: #888888;
-dialogsTextFgService: #4981af;
+dialogsTextFgService: #999;
 dialogsTextFgActive: #ffffff;
 dialogsDateFont: font(13px);
 dialogsDateFgActive: #ffffff;
-dialogsDateFg: #a8a8a8;
+dialogsDateFg: #eee;
 dialogsDateSkip: 5px;
-dialogsNameFg: #000;
+dialogsNameFg: #eee;
 dialogsNameTop: 2px;
 
-dialogsRowHeight: 62px;
+dialogsRowHeight: 60px;
 dialogsFilterPadding: 10px;
 dialogsPhotoSize: 46px;
 dialogsPhotoPadding: 12px;
@@ -55,8 +55,8 @@ dialogsImportantBarHeight: 37px;
 
 dialogsSkip: 8px;
 
-dialogsWidthMin: 260px;
-dialogsWidthMax: 540px;
+dialogsWidthMin: 160px;
+dialogsWidthMax: 240px;
 dialogsTextWidthMin: 150px;
 dialogsScroll: flatScroll(scrollDef) {
 	topsh: 0px;
@@ -99,10 +99,10 @@ dialogsNewChatButton: RoundButton {
 }
 
 dialogsChatTypeSkip: 22px;
-dialogsChatIcon: icon {{ "dialogs_chat", #373737, point(1px, 4px) }};
-dialogsChatActiveIcon: icon {{ "dialogs_chat", #ffffff, point(1px, 4px) }};
-dialogsChannelIcon: icon {{ "dialogs_channel", #373737, point(3px, 4px) }};
-dialogsChannelActiveIcon: icon {{ "dialogs_channel", #ffffff, point(3px, 4px) }};
+dialogsChatIcon: icon {{ "dialogs_chat", #e4e4e4, point(1px, 2px) }};
+dialogsChatActiveIcon: icon {{ "dialogs_chat", #ffffff, point(1px, 2px) }};
+dialogsChannelIcon: icon {{ "dialogs_channel", #e4e4e4, point(3px, 2px) }};
+dialogsChannelActiveIcon: icon {{ "dialogs_channel", #ffffff, point(3px, 2px) }};
 
 dialogsSentStateFg: #5dc452;
 dialogsSendStateSkip: 20px;
@@ -114,12 +114,12 @@ dialogsReceivedIcon: icon {{ "dialogs_received", dialogsSentStateFg, point(5px, 
 dialogsReceivedActiveIcon: icon {{ "dialogs_received", #ffffff, point(5px, 4px) }};
 
 dialogsVerifiedIcon: icon {
-	{ "dialogs_verified_star", #4abcf1, point(4px, 2px) },
-	{ "dialogs_verified_check", #ffffff, point(7px, 7px) },
+	{ "dialogs_verified_star", #eeeeee, point(4px, 2px) },
+	{ "dialogs_verified_check", #4abcf1, point(7px, 7px) },
 };
 dialogsVerifiedActiveIcon: icon {
-	{ "dialogs_verified_star", #ffffff, point(4px, 2px) },
-	{ "dialogs_verified_check", #6a91b1, point(7px, 7px) },
+	{ "dialogs_verified_star", #eeeeee, point(4px, 2px) },
+	{ "dialogs_verified_check", #4abcf1, point(7px, 7px) },
 };
 
 historySendingIcon: icon {{ "dialogs_sending", #98d292, point(5px, 5px) }};

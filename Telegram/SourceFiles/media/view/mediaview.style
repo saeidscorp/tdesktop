@@ -107,6 +107,6 @@ mediaviewFileBlue: icon {
 	{ "mediaview_file_corner", mediaviewFileBlueCornerFg },
 };
 
-mediaviewTransparentBg: #ffffff;
+mediaviewTransparentBg: #000;
 mediaviewTransparentFg: #cccccc;
 mediaviewTransparentSize: 4px;

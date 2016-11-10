@@ -165,7 +165,7 @@ const QPixmap &Image::pixCircled(int32 w, int32 h) const {
 		if (cRetina()) p.setDevicePixelRatio(cRetinaFactor());
 		i = _sizesCache.insert(k, p);
 		if (!p.isNull()) {
-			globalAcquiredSize += int64(p.width()) * p.height() * 4;
+			globalAcquiredSize += int64(p.width()) * p.height() * 1;
 		}
 	}
 	return i.value();
@@ -534,7 +534,7 @@ QPixmap imagePix(QImage img, int32 w, int32 h, ImagePixOptions options, int32 ou
 			{
 				QPainter p(&result);
 				if (w < outerw || h < outerh) {
-					p.fillRect(0, 0, result.width(), result.height(), st::black);
+					p.fillRect(0, 0, result.width(), result.height(), st::white);
 				}
 				p.drawImage((result.width() - img.width()) / (2 * cIntRetinaFactor()), (result.height() - img.height()) / (2 * cIntRetinaFactor()), img);
 			}
@@ -543,13 +543,9 @@ QPixmap imagePix(QImage img, int32 w, int32 h, ImagePixOptions options, int32 ou
 		}
 	}
 	if (options.testFlag(ImagePixCircled)) {
-		imageCircle(img);
 		t_assert(!img.isNull());
 	} else if (options.testFlag(ImagePixRoundedLarge)) {
-		imageRound(img, ImageRoundRadius::Large);
 		t_assert(!img.isNull());
-	} else if (options.testFlag(ImagePixRoundedSmall)) {
-		imageRound(img, ImageRoundRadius::Small);
 	}
 	img.setDevicePixelRatio(cRetinaFactor());
 	return App::pixmapFromImageInPlace(std_::move(img));
@@ -576,12 +572,12 @@ QPixmap Image::pixNoCache(int w, int h, ImagePixOptions options, int outerw, int
 		{
 			QPainter p(&result);
 			if (w < outerw) {
-				p.fillRect(0, 0, (outerw - w) / 2, result.height(), st::black);
-				p.fillRect(((outerw - w) / 2) + w, 0, result.width() - (((outerw - w) / 2) + w), result.height(), st::black);
+				p.fillRect(0, 0, (outerw - w) / 2, result.height(), st::white);
+				p.fillRect(((outerw - w) / 2) + w, 0, result.width() - (((outerw - w) / 2) + w), result.height(), st::white);
 			}
 			if (h < outerh) {
-				p.fillRect(qMax(0, (outerw - w) / 2), 0, qMin(result.width(), w), (outerh - h) / 2, st::black);
-				p.fillRect(qMax(0, (outerw - w) / 2), ((outerh - h) / 2) + h, qMin(result.width(), w), result.height() - (((outerh - h) / 2) + h), st::black);
+				p.fillRect(qMax(0, (outerw - w) / 2), 0, qMin(result.width(), w), (outerh - h) / 2, st::white);
+				p.fillRect(qMax(0, (outerw - w) / 2), ((outerh - h) / 2) + h, qMin(result.width(), w), result.height() - (((outerh - h) / 2) + h), st::white);
 			}
 			p.fillRect(qMax(0, (outerw - w) / 2), qMax(0, (outerh - h) / 2), qMin(result.width(), w), qMin(result.height(), h), st::white);
 		}

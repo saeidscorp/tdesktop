@@ -21,12 +21,12 @@ Copyright (c) 2014-2016 John Preston, https://desktop.telegram.org
 using "basic.style";
 using "ui/widgets/widgets.style";
 
-boxBlueTitleBg: #6393b5;
+boxBlueTitleBg: #222;
 boxBlueTitleAdditionalFg: #dae9f5;
 boxBlueTitleAdditionalSkip: 12px;
 boxBlueTitlePosition: point(23px, 18px);
 boxBlueTitleShadow: icon {{ "box_title_shadow", windowShadowFg }};
-boxBlueCloseFg: #c8e1f0;
+boxBlueCloseFg: #DADADA;
 boxBlueCloseOverFg: #ffffff;
 boxBlueCloseIcon: icon {{ "box_button_close", boxBlueTitleBg }};
 boxBlueCloseDuration: 150;
@@ -83,9 +83,9 @@ contactPhoneIcon: icon {{ "add_contact_phone", #999999 }};
 contactIconTop: 10px;
 
 contactsNewItemHeight: 53px;
-contactsNewItemIcon: icon {{ "contacts_add", #749fc2, point(29px, 19px) }};
+contactsNewItemIcon: icon {{ "contacts_add", #eeeeee, point(29px, 19px) }};
 contactsNewItemTop: 18px;
-contactsNewItemFg: #4b82af;
+contactsNewItemFg: #eee;
 
 contactsMultiSelect: MultiSelect {
 	padding: margins(8px, 8px, 8px, 8px);

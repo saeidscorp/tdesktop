@@ -2745,7 +2745,7 @@ void HistoryHider::paintEvent(QPaintEvent *e) {
 			int32 w = st::forwardMargins.left() + _chooseWidth + st::forwardMargins.right(), h = st::forwardMargins.top() + st::forwardFont->height + st::forwardMargins.bottom();
 			App::roundRect(p, (width() - w) / 2, (height() - st::titleHeight - h) / 2, w, h, st::forwardBg, ForwardCorners);
 
-			p.setPen(st::white);
+			p.setPen(st::black);
 			p.drawText(_box, lang(_botAndQuery.isEmpty() ? lng_forward_choose : lng_inline_switch_choose), QTextOption(style::al_center));
 		}
 	} else {
@@ -6248,7 +6248,7 @@ void HistoryWidget::paintTopBar(Painter &p, float64 over, int32 decreaseWidth) {
 		if (a_coordOver.current() > 0) {
 			p.drawPixmap(QRect(0, 0, a_coordOver.current(), st::topBarHeight), _cacheUnder, QRect(-a_coordUnder.current() * retina, 0, a_coordOver.current() * retina, st::topBarHeight * retina));
 			p.setOpacity(a_progress.current() * st::slideFadeOut);
-			p.fillRect(0, 0, a_coordOver.current(), st::topBarHeight, st::black);
+			p.fillRect(0, 0, a_coordOver.current(), st::topBarHeight, st::white);
 			p.setOpacity(1);
 		}
 		p.drawPixmap(QRect(a_coordOver.current(), 0, _cacheOver.width() / retina, st::topBarHeight), _cacheOver, QRect(0, 0, _cacheOver.width(), st::topBarHeight * retina));
@@ -8724,7 +8724,7 @@ void HistoryWidget::paintEvent(QPaintEvent *e) {
 		if (a_coordOver.current() > 0) {
 			p.drawPixmap(QRect(0, 0, a_coordOver.current(), height()), _cacheUnder, QRect(-a_coordUnder.current() * retina, inCacheTop * retina, a_coordOver.current() * retina, height() * retina));
 			p.setOpacity(a_progress.current() * st::slideFadeOut);
-			p.fillRect(0, 0, a_coordOver.current(), height(), st::black);
+			p.fillRect(0, 0, a_coordOver.current(), height(), st::white);
 			p.setOpacity(1);
 		}
 		p.drawPixmap(QRect(a_coordOver.current(), 0, _cacheOver.width() / retina, height()), _cacheOver, QRect(0, inCacheTop * retina, _cacheOver.width(), height() * retina));

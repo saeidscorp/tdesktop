@@ -237,16 +237,16 @@ void PhotoCropBox::paintEvent(QPaintEvent *e) {
 	p.drawPixmap(0, 0, _thumb);
 	p.setOpacity(0.5);
 	if (_cropy > 0) {
-		p.fillRect(QRect(0, 0, _cropx + _cropw, _cropy), st::black->b);
+		p.fillRect(QRect(0, 0, _cropx + _cropw, _cropy), st::white->b);
 	}
 	if (_cropx + _cropw < _thumbw) {
-		p.fillRect(QRect(_cropx + _cropw, 0, _thumbw - _cropx - _cropw, _cropy + _cropw), st::black->b);
+		p.fillRect(QRect(_cropx + _cropw, 0, _thumbw - _cropx - _cropw, _cropy + _cropw), st::white->b);
 	}
 	if (_cropy + _cropw < _thumbh) {
-		p.fillRect(QRect(_cropx, _cropy + _cropw, _thumbw - _cropx, _thumbh - _cropy - _cropw), st::black->b);
+		p.fillRect(QRect(_cropx, _cropy + _cropw, _thumbw - _cropx, _thumbh - _cropy - _cropw), st::white->b);
 	}
 	if (_cropx > 0) {
-		p.fillRect(QRect(0, _cropy, _cropx, _thumbh - _cropy), st::black->b);
+		p.fillRect(QRect(0, _cropy, _cropx, _thumbh - _cropy), st::white->b);
 	}
 
 	int32 delta = st::cropPointSize, mdelta(-delta / 2);

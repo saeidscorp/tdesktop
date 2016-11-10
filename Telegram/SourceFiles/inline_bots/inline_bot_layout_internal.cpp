@@ -607,7 +607,7 @@ void Video::paint(Painter &p, const QRect &clip, const PaintContext *context) co
 		int durationW = _durationWidth + 2 * st::msgDateImgPadding.x(), durationH = st::normalFont->height + 2 * st::msgDateImgPadding.y();
 		int durationX = (st::inlineThumbSize - durationW) / 2, durationY = st::inlineRowMargin + st::inlineThumbSize - durationH;
 		App::roundRect(p, durationX, durationY - st::msgDateImgPadding.y(), durationW, durationH, st::msgDateImgBg, DateCorners);
-		p.setPen(st::white);
+		p.setPen(st::black);
 		p.setFont(st::normalFont);
 		p.drawText(durationX + st::msgDateImgPadding.x(), durationTop + st::normalFont->ascent, _duration);
 	}
@@ -1051,7 +1051,7 @@ void Article::paint(Painter &p, const QRect &clip, const PaintContext *context) 
 				p.fillRect(rthumb, colors[index]);
 				if (!_thumbLetter.isEmpty()) {
 					p.setFont(st::linksLetterFont);
-					p.setPen(st::white);
+					p.setPen(st::black);
 					p.drawText(rthumb, _thumbLetter, style::al_center);
 				}
 			} else {
