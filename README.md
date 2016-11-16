@@ -1,6 +1,6 @@
 # [Telegram Desktop][telegram_desktop] – Fork of Official Messenger including a dark theme
 
-This is the complete source code and the build instructions for the alpha version of the official desktop client for the [Telegram][telegram] messenger, based on the [Telegram API][telegram_api] and the [MTProto][telegram_proto] secure protocol.
+This is the complete source code and the build instructions for the dark version of the official desktop client for the [Telegram][telegram] messenger, based on the [Telegram API][telegram_api] and the [MTProto][telegram_proto] secure protocol.
 
 The source code is published under GPLv3 with OpenSSL exception, the license is available [here][license].
 
@@ -8,19 +8,16 @@ The source code is published under GPLv3 with OpenSSL exception, the license is 
 
 **This fork of Telegram Desktop has a dark theme**
 
-![](tgdark.png)
+![Screenshot](tgdark.png)
 
-Co-development and messing-around with [JuanPotato](https://github.com/JuanPotato) and [Melvin V.](https://mel.vin/)
-Melvin V. has his own fork of telegram with seperate patches [link to his Gitlab](https://git.mel.vin/melvin/telegram-desktop)
+Heavily based on works of [NXij](https://github.com/NXij/tdesktop-dark).
 
 
 Windows: Binary download can be found under [releases](https://github.com/NXij/tdesktop-dark/releases)
 ## Custom build changelog
-### 2016-11-10
+### 2016-11-16
 
 * Darker theme
-* Messages from the same author are now grouped together
-* Everything is now square instead of bubbles
 * Based on Telegram v 0.10.19
 
 ## Supported systems
@@ -89,7 +86,7 @@ Windows: Binary download can be found under [releases](https://github.com/NXij/t
   * GeneratedFiles/lang.h
   * GeneratedFiles/lang.cpp
 
-[//]: # (LINKS)
+[//]: # "LINKS"
 [telegram]: https://telegram.org
 [telegram_desktop]: https://desktop.telegram.org
 [telegram_api]: https://core.telegram.org
