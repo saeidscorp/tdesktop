@@ -77,9 +77,9 @@ profileDropAreaPadding: margins(25px, 3px, 25px, 20px);
 profileDropAreaTitleFont: font(24px);
 profileDropAreaTitleTop: 30px;
 profileDropAreaSubtitleFont: font(16px);
-profileDropAreaSubtitleTop: 10px;
+profileDropAreaSubtitleTop: 68px;
 profileDropAreaBorderFg: profileDropAreaFg;
-profileDropAreaBorderWidth: 1px;
+profileDropAreaBorderWidth: 3px;
 profileDropAreaDuration: 200;
 
 profileDividerFg: #000;

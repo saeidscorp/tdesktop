@@ -23,10 +23,10 @@ using "basic_types.style";
 
 dialogsUnreadFg: #232629;
 dialogsUnreadFgActive: #232629;
-dialogsUnreadBg: #BBB;//#6fc766;
+dialogsUnreadBg: #6fc766;//#3ac34740;
 dialogsUnreadBgMuted: #999;
 dialogsUnreadBgActive: #BBB;
-dialogsUnreadBgMutedActive: #BBB;
+dialogsUnreadBgMutedActive: #6fc766;
 dialogsUnreadFont: font(12px bold);
 dialogsUnreadHeight: 19px;
 dialogsUnreadPadding: 5px;
@@ -55,8 +55,8 @@ dialogsImportantBarHeight: 37px;
 
 dialogsSkip: 8px;
 
-dialogsWidthMin: 160px;
-dialogsWidthMax: 240px;
+dialogsWidthMin: 260px;
+dialogsWidthMax: 320px;
 dialogsTextWidthMin: 150px;
 dialogsScroll: flatScroll(scrollDef) {
 	topsh: 0px;
@@ -99,10 +99,10 @@ dialogsNewChatButton: RoundButton {
 }
 
 dialogsChatTypeSkip: 22px;
-dialogsChatIcon: icon {{ "dialogs_chat", #e4e4e4, point(1px, 2px) }};
-dialogsChatActiveIcon: icon {{ "dialogs_chat", #ffffff, point(1px, 2px) }};
-dialogsChannelIcon: icon {{ "dialogs_channel", #e4e4e4, point(3px, 2px) }};
-dialogsChannelActiveIcon: icon {{ "dialogs_channel", #ffffff, point(3px, 2px) }};
+dialogsChatIcon: icon {{ "dialogs_chat", #373737, point(1px, 4px) }};
+dialogsChatActiveIcon: icon {{ "dialogs_chat", #ffffff, point(1px, 4px) }};
+dialogsChannelIcon: icon {{ "dialogs_channel", #373737, point(3px, 4px) }};
+dialogsChannelActiveIcon: icon {{ "dialogs_channel", #ffffff, point(3px, 4px) }};
 
 dialogsSentStateFg: #5dc452;
 dialogsSendStateSkip: 20px;

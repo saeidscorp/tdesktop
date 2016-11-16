@@ -165,7 +165,7 @@ const QPixmap &Image::pixCircled(int32 w, int32 h) const {
 		if (cRetina()) p.setDevicePixelRatio(cRetinaFactor());
 		i = _sizesCache.insert(k, p);
 		if (!p.isNull()) {
-			globalAcquiredSize += int64(p.width()) * p.height() * 1;
+			globalAcquiredSize += int64(p.width()) * p.height() * 4;
 		}
 	}
 	return i.value();
@@ -543,9 +543,15 @@ QPixmap imagePix(QImage img, int32 w, int32 h, ImagePixOptions options, int32 ou
 		}
 	}
 	if (options.testFlag(ImagePixCircled)) {
+		imageCircle(img);
 		t_assert(!img.isNull());
-	} else if (options.testFlag(ImagePixRoundedLarge)) {
+	}
+	else if (options.testFlag(ImagePixRoundedLarge)) {
+		imageRound(img, ImageRoundRadius::Large);
 		t_assert(!img.isNull());
+	}
+	else if (options.testFlag(ImagePixRoundedSmall)) {
+		imageRound(img, ImageRoundRadius::Small);
 	}
 	img.setDevicePixelRatio(cRetinaFactor());
 	return App::pixmapFromImageInPlace(std_::move(img));

@@ -117,8 +117,7 @@ QImage createCircleMask(int size, const QColor &bg, const QColor &fg) {
 		pcircle.fillRect(0, 0, realSize, realSize, bg);
 		pcircle.setPen(Qt::NoPen);
 		pcircle.setBrush(fg);
-		QRectF rectangle(0, 0, realSize, realSize);
-		pcircle.drawRoundedRect(rectangle, 0, 0);
+		pcircle.drawEllipse(0, 0, realSize, realSize);
 	}
 	result.setDevicePixelRatio(cRetinaFactor());
 	return result;
