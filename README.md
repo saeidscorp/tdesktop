@@ -13,7 +13,7 @@ The source code is published under GPLv3 with OpenSSL exception, the license is 
 Heavily based on works of [NXij](https://github.com/NXij/tdesktop-dark).
 
 
-Windows: Binary download can be found under [releases](https://github.com/NXij/tdesktop-dark/releases)
+Windows: Binary download can be found under [releases](https://github.com/saeidscorp/tdesktop/releases)
 ## Custom build changelog
 ### 2016-11-16
 
